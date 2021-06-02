@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/d9-blog/react-js/tw2-01/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/d9-blog/react-js/tw2-01/static/js/main.79ac4562.chunk.js",
-    "main.js.map": "/d9-blog/react-js/tw2-01/static/js/main.79ac4562.chunk.js.map",
-    "runtime-main.js": "/d9-blog/react-js/tw2-01/static/js/runtime-main.3ce8156c.js",
-    "runtime-main.js.map": "/d9-blog/react-js/tw2-01/static/js/runtime-main.3ce8156c.js.map",
-    "static/js/2.857ffa6c.chunk.js": "/d9-blog/react-js/tw2-01/static/js/2.857ffa6c.chunk.js",
-    "static/js/2.857ffa6c.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/2.857ffa6c.chunk.js.map",
-    "static/js/3.5613ebfc.chunk.js": "/d9-blog/react-js/tw2-01/static/js/3.5613ebfc.chunk.js",
-    "static/js/3.5613ebfc.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/3.5613ebfc.chunk.js.map",
+    "main.css": "/d9-blog/react-js/tw2-01/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/d9-blog/react-js/tw2-01/static/js/main.1f8d4775.chunk.js",
+    "main.js.map": "/d9-blog/react-js/tw2-01/static/js/main.1f8d4775.chunk.js.map",
+    "runtime-main.js": "/d9-blog/react-js/tw2-01/static/js/runtime-main.506d604d.js",
+    "runtime-main.js.map": "/d9-blog/react-js/tw2-01/static/js/runtime-main.506d604d.js.map",
+    "static/js/2.5f35de91.chunk.js": "/d9-blog/react-js/tw2-01/static/js/2.5f35de91.chunk.js",
+    "static/js/2.5f35de91.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/2.5f35de91.chunk.js.map",
+    "static/js/3.413fd871.chunk.js": "/d9-blog/react-js/tw2-01/static/js/3.413fd871.chunk.js",
+    "static/js/3.413fd871.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/3.413fd871.chunk.js.map",
     "index.html": "/d9-blog/react-js/tw2-01/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/d9-blog/react-js/tw2-01/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.857ffa6c.chunk.js.LICENSE.txt": "/d9-blog/react-js/tw2-01/static/js/2.857ffa6c.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/d9-blog/react-js/tw2-01/static/media/logo.6ce24c58.svg"
+    "static/css/main.6dea0f05.chunk.css.map": "/d9-blog/react-js/tw2-01/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.5f35de91.chunk.js.LICENSE.txt": "/d9-blog/react-js/tw2-01/static/js/2.5f35de91.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3ce8156c.js",
-    "static/js/2.857ffa6c.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.79ac4562.chunk.js"
+    "static/js/runtime-main.506d604d.js",
+    "static/js/2.5f35de91.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.1f8d4775.chunk.js"
   ]
 }
