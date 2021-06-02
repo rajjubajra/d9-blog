@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/d9-blog/react-js/b5-01/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/d9-blog/react-js/b5-01/static/js/main.526ca7f1.chunk.js",
-    "main.js.map": "/d9-blog/react-js/b5-01/static/js/main.526ca7f1.chunk.js.map",
-    "runtime-main.js": "/d9-blog/react-js/b5-01/static/js/runtime-main.10b56893.js",
-    "runtime-main.js.map": "/d9-blog/react-js/b5-01/static/js/runtime-main.10b56893.js.map",
-    "static/js/2.bde48092.chunk.js": "/d9-blog/react-js/b5-01/static/js/2.bde48092.chunk.js",
-    "static/js/2.bde48092.chunk.js.map": "/d9-blog/react-js/b5-01/static/js/2.bde48092.chunk.js.map",
-    "static/js/3.7c166308.chunk.js": "/d9-blog/react-js/b5-01/static/js/3.7c166308.chunk.js",
-    "static/js/3.7c166308.chunk.js.map": "/d9-blog/react-js/b5-01/static/js/3.7c166308.chunk.js.map",
+    "main.css": "/d9-blog/react-js/b5-01/static/css/main.855c4370.chunk.css",
+    "main.js": "/d9-blog/react-js/b5-01/static/js/main.b67c8ea0.chunk.js",
+    "main.js.map": "/d9-blog/react-js/b5-01/static/js/main.b67c8ea0.chunk.js.map",
+    "runtime-main.js": "/d9-blog/react-js/b5-01/static/js/runtime-main.08289b5c.js",
+    "runtime-main.js.map": "/d9-blog/react-js/b5-01/static/js/runtime-main.08289b5c.js.map",
+    "static/js/2.0ba1af19.chunk.js": "/d9-blog/react-js/b5-01/static/js/2.0ba1af19.chunk.js",
+    "static/js/2.0ba1af19.chunk.js.map": "/d9-blog/react-js/b5-01/static/js/2.0ba1af19.chunk.js.map",
+    "static/js/3.b5441150.chunk.js": "/d9-blog/react-js/b5-01/static/js/3.b5441150.chunk.js",
+    "static/js/3.b5441150.chunk.js.map": "/d9-blog/react-js/b5-01/static/js/3.b5441150.chunk.js.map",
     "index.html": "/d9-blog/react-js/b5-01/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/d9-blog/react-js/b5-01/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.bde48092.chunk.js.LICENSE.txt": "/d9-blog/react-js/b5-01/static/js/2.bde48092.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/d9-blog/react-js/b5-01/static/media/logo.6ce24c58.svg"
+    "static/css/main.855c4370.chunk.css.map": "/d9-blog/react-js/b5-01/static/css/main.855c4370.chunk.css.map",
+    "static/js/2.0ba1af19.chunk.js.LICENSE.txt": "/d9-blog/react-js/b5-01/static/js/2.0ba1af19.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.10b56893.js",
-    "static/js/2.bde48092.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.526ca7f1.chunk.js"
+    "static/js/runtime-main.08289b5c.js",
+    "static/js/2.0ba1af19.chunk.js",
+    "static/css/main.855c4370.chunk.css",
+    "static/js/main.b67c8ea0.chunk.js"
   ]
 }
