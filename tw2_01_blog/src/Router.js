@@ -14,8 +14,8 @@ function Router() {
 
 
   return (
-    <div>
-      <h1>Router...</h1>
+    <div className="bg-gray-100 min-h-full w-full">
+      <h1 className="text-5xl">Router...</h1>
     </div>
   )
 }
