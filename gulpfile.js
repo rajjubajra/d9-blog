@@ -4,17 +4,17 @@ const {src, dest, watch, series} = require('gulp');
  * 
  * Move Files and Folder from 
  * 'build' folder to 
- * ../b5-*
+ * ../tw2-*
  * 
  */
 
 function moveFiles(){
-  return src('./b5_01_blog/build/**/*.*')
-  .pipe(dest('./b5-01'))
+  return src('./tw2_01_blog/build/**/*.*')
+  .pipe(dest('./tw2-01'))
 }
 
 function watchTask(){
-  watch('./b5_01_blog/build/*.*');
+  watch('./tw2_01_blog/build/*.*');
 }
 
 //default gulp
