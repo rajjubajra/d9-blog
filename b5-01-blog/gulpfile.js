@@ -10,7 +10,7 @@ const {src, dest, watch, series} = require('gulp');
 
 function moveFiles(){
   return src('./build/**/*.*')
-  .pipe(dest('../tw2-01'))
+  .pipe(dest('../b5-01'))
 }
 
 function watchTask(){
