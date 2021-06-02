@@ -16,8 +16,9 @@ export const actionAll = () => {
    * Install Module used
    * https://www.drupal.org/project/rest_menu_items
    * 
+   * Enable : Rest UI : Menu Item to GET 
    * Set Permission : Access GET on Menu items per menu resource
-   * Enable : Rest UI : Rest Menu Item to GET 
+   * 
    * 
    */
   
@@ -33,20 +34,11 @@ export const actionAll = () => {
                     : NavRemote;
 
   /** MULTIPLE CHOICE QUIZ */
-  const MultipleChoiceLocal = './data/multipleChoice.json';
-  const MultipleChoiceRemote = `${baseurl.URL}/rest/multiple-choice-question`;
-  const MultipleChoice = window.location.origin === 'http://localhost:3000' 
-                    ? MultipleChoiceLocal
-                    : MultipleChoiceRemote;
-
-
-  /** ABOUT PAGE */
-  // const AboutLocal = './data/aboutpage.json';
-  // const AboutRemote = `${baseurl.URL}/rest/about`;
-  // const ABOUT = window.location.origin === 'http://localhost:3000' 
-  //                   ? AboutLocal
-  //                   : AboutRemote;
-  
+  const BlogLocal = './data/blog.json';
+  const BlogRemote = `${baseurl.URL}/rest/blog`;
+  const Blog = window.location.origin === 'http://localhost:3000' 
+                    ? BlogLocal
+                    : BlogRemote;
 
 
   return function (dispatch) {
@@ -72,52 +64,26 @@ export const actionAll = () => {
       })
 
 
-    /** MULTIPLE CHOICE QUESTION */
+    /** BLOG */
     dispatch({
-      type: actionTypes.MULTIPLE_CHOICE_START_FETCHING
+      type: actionTypes.BLOG_START_FETCHING
     })
-    const reqMUL_CHO = axios.get(MultipleChoice, headers)
-    reqMUL_CHO.then((res) => {
+    const reqBlog = axios.get(Blog, headers)
+    reqBlog.then((res) => {
         //console.log("action",res.data)
         dispatch({
-          type: actionTypes.MULTIPLE_CHOICE_FETCHED,
+          type: actionTypes.BLOG_FETCHED,
           data: res.data
         })
       })
       .catch(err => {
         dispatch({
-          type: actionTypes.MULTIPLE_CHOICE_FETCH_ERROR,
+          type: actionTypes.BLOG_FETCH_ERROR,
           fetched: false,
           error: err
         })
       })
-
-
-    // /** ABOUT PAGE */
-    // dispatch({
-    //   type: actionTypes.ABOUT_START_FETCHING
-    // })
-    // const reqAbout = axios.get(ABOUT, headers)
-    // reqAbout.then((res) => {
-    //    // console.log("action",res.data)
-    //     dispatch({
-    //       type: actionTypes.ABOUT_FETCHED,
-    //       data: res.data
-    //     })
-    //   })
-    //   .catch(err => {
-    //     dispatch({
-    //       type: actionTypes.ABOUT_FETCH_ERROR,
-    //       fetched: false,
-    //       error: err
-    //     })
-    //   })
-
-    
-
-
-
-
-
   }
-}
+
+
+}//ActionAll closed
