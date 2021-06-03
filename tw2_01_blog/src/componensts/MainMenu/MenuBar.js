@@ -7,7 +7,6 @@ import SearchIcon from './SearchIcon';
 import {useSelector} from 'react-redux';
 
 
-
 function MenuBar() {
 
   //const [menudata, setMenuData] = useState([]);
@@ -19,7 +18,9 @@ function MenuBar() {
   }
 
   const menudata = useSelector(state => state.reducerMainNav.nav_data);
-
+  console.log("menudata", menudata);
+  
+  
   return (
     <>
   {/** ROW - 1 */}
