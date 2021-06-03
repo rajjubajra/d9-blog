@@ -1,6 +1,7 @@
 import {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {actionAll} from './Redux/Action';
+import MenuBar from './componensts/MainMenu/MenuBar';
 
 function Router() {
 
@@ -15,6 +16,7 @@ function Router() {
 
   return (
     <div className="bg-gray-100 min-h-full w-full">
+      <MenuBar />
       <h1 className="text-5xl">Router...</h1>
     </div>
   )
