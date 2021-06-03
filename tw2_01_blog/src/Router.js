@@ -1,34 +1,36 @@
-import {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
-import MenuBar from './componensts/MainMenu/MenuBar';
-import {actionAll} from './Redux/Action';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './Page/Home';
 import About from './Page/About';
 import Contact from './Page/Contact';
 import Blog from './Page/Blog';
+import MenuBar from './componensts/MainMenu/MenuBar';
+import {useDispatch} from 'react-redux';
+import {useEffect} from 'react';
+import {actionAll} from './Redux/Action';
+
+
 
 
 function Router() {
 
   const dispatch = useDispatch();
 
-
-
   useEffect(()=>{
-    dispatch(actionAll());
+console.log("test");
+dispatch(actionAll());
+
   },[dispatch])
 
 
   return (
     <div className="bg-gray-100 min-h-full w-full">
       <BrowserRouter>
-      <MenuBar />
+        <MenuBar />
       <Switch>
-        <Route exact to="/" component={Home} />
-        <Route to="/about" component={About} />
-        <Route to="/contact" component={Contact} />
-        <Route to="/blog" component={Blog} />
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/blog" component={Blog} />
       </Switch>
       </BrowserRouter>
       

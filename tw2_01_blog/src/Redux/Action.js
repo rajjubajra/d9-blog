@@ -33,6 +33,7 @@ export const actionAll = () => {
                     ? NavLocal
                     : NavRemote;
 
+  console.log(NAV);
   /** MULTIPLE CHOICE QUIZ */
   const BlogLocal = './data/blog.json';
   const BlogRemote = `${baseurl.URL}/rest/blog`;
@@ -40,7 +41,7 @@ export const actionAll = () => {
                     ? BlogLocal
                     : BlogRemote;
 
-
+  console.log(Blog);
   return function (dispatch) {
 
     /** NAVIGATION */
@@ -49,7 +50,7 @@ export const actionAll = () => {
     })
     const reqNav = axios.get(NAV, headers)
     reqNav.then((res) => {
-        //console.log("action",res.data)
+        console.log("action",res.data)
         dispatch({
           type: actionTypes.MAIN_NAV_FETCHED,
           data: res.data
@@ -63,14 +64,13 @@ export const actionAll = () => {
         })
       })
 
-
     /** BLOG */
     dispatch({
       type: actionTypes.BLOG_START_FETCHING
     })
     const reqBlog = axios.get(Blog, headers)
     reqBlog.then((res) => {
-        //console.log("action",res.data)
+        console.log("action",res.data)
         dispatch({
           type: actionTypes.BLOG_FETCHED,
           data: res.data
@@ -84,6 +84,5 @@ export const actionAll = () => {
         })
       })
   }
-
 
 }//ActionAll closed
