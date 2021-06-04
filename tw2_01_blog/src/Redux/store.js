@@ -3,7 +3,8 @@ import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import {
   reducerMainNav, 
-  reducerBlog
+  reducerBlog,
+  reducerTaxonomy
   
 } from './Reducer';
 
@@ -11,7 +12,8 @@ const reducer = combineReducers(
   {
     // reducerFetchData,
     reducerMainNav,
-    reducerBlog
+    reducerBlog,
+    reducerTaxonomy
   }
 );
 

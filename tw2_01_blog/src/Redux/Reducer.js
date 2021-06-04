@@ -78,3 +78,40 @@ export const reducerBlog = (state = initialStateBlog, action) => {
 }
 
 
+/** TAXONOMY */
+const initialStateTaxonomy = {
+  taxonomy_fetching: false,
+  taxonomy_fetched: false,
+  taxonomy_fetch_error: '',
+  taxonomy_data: [],
+  taxonomy_dataLength: 0
+}
+
+export const reducerTaxonomy = (state = initialStateTaxonomy, action) => {
+  
+  switch(action.type){
+
+    case actionTypes.TAXONOMY_START_FETCHING:
+      return {
+        taxonomy_fetching: true,
+        taxonomy_data: []
+      }
+    case actionTypes.TAXONOMY_FETCHED:
+      return {
+        taxonomy_data: action.data,
+        taxonomy_fetched: true,
+        taxonomy_dataLength: action.data.length
+      }
+    case actionTypes.TAXONOMY_FETCH_ERROR:
+      return {
+        taxonomy_fetched: false,
+        taxonomy_fetching: false,
+        taxonomy_fetch_error: action.error
+      }
+       /** default state */
+      default:
+        return state;
+  }
+}
+
+

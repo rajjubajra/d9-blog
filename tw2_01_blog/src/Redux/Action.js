@@ -34,12 +34,19 @@ export const actionAll = () => {
                     : NavRemote;
 
   
-  /** MULTIPLE CHOICE QUIZ */
+  /** BLOG */
   const BlogLocal = './data/blog.json';
   const BlogRemote = `${baseurl.URL}/rest/blog`;
   const Blog = window.location.origin === 'http://localhost:3000' 
                     ? BlogLocal
                     : BlogRemote;
+
+  /** TAXONOMY */
+  const TaxonomyLocal = './data/taxonomy.json';
+  const TaxonomyRemote = `${baseurl.URL}/rest/taxonomy`;
+  const Taxonomy = window.location.origin === 'http://localhost:3000' 
+                    ? TaxonomyLocal
+                    : TaxonomyRemote;
 
   
   return function (dispatch) {
@@ -83,6 +90,30 @@ export const actionAll = () => {
           error: err
         })
       })
-  }
 
+      
+  /** TAXONOMY */
+    dispatch({
+      type: actionTypes.TAXONOMY_START_FETCHING
+    })
+    const reqTaxonomy = axios.get(Taxonomy, headers)
+    reqTaxonomy.then((res) => {
+        console.log("action",res.data)
+        dispatch({
+          type: actionTypes.TAXONOMY_FETCHED,
+          data: res.data
+        })
+      })
+      .catch(err => {
+        dispatch({
+          type: actionTypes.TAXONOMY_FETCH_ERROR,
+          fetched: false,
+          error: err
+        })
+      })
+
+
+
+
+  }
 }//ActionAll closed
