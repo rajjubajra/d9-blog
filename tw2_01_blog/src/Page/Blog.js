@@ -1,14 +1,15 @@
-import {useSelector} from 'react-redux';
-
+import BlogListTwo from './Blog/BlogListTwo';
 
 function Blog() {
-
-  const state = useSelector(state=>state.reducerBlog.blog_data);
-  console.log(state);
-
+  
   return (
     <div>
-      BLog page
+      <div className="m-10">
+        <h1>BLOG POST</h1>
+      </div>
+      
+      <BlogListTwo />
+      
     </div>
   )
 }

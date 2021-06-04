@@ -4,22 +4,12 @@ import About from './Page/About';
 import Contact from './Page/Contact';
 import Blog from './Page/Blog';
 import MenuBar from './componensts/MainMenu/MenuBar';
-import {useDispatch} from 'react-redux';
-import {useEffect} from 'react';
-import {actionAll} from './Redux/Action';
-
+import BlogPost from './Page/BlogPost';
 
 
 
 function Router() {
 
-  const dispatch = useDispatch();
-
-  useEffect(()=>{
-console.log("test");
-dispatch(actionAll());
-
-  },[dispatch])
 
 
   return (
@@ -31,10 +21,9 @@ dispatch(actionAll());
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/blog" component={Blog} />
+        <Route path="/blog-post/:nid" component={BlogPost} />
       </Switch>
       </BrowserRouter>
-      
-      <h1 className="text-5xl">Router...</h1>
     </div>
   )
 }

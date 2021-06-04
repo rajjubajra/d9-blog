@@ -33,7 +33,7 @@ export const actionAll = () => {
                     ? NavLocal
                     : NavRemote;
 
-  console.log(NAV);
+  
   /** MULTIPLE CHOICE QUIZ */
   const BlogLocal = './data/blog.json';
   const BlogRemote = `${baseurl.URL}/rest/blog`;
@@ -41,7 +41,7 @@ export const actionAll = () => {
                     ? BlogLocal
                     : BlogRemote;
 
-  console.log(Blog);
+  
   return function (dispatch) {
 
     /** NAVIGATION */
