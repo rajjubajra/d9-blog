@@ -18,17 +18,21 @@ function BlogListTwo({tid}) {
           let tagArr = item.field_tags_1.split(',');
           return tagId === null ?
           <BlogCard 
+            key={item.nid}
             title={item.title}
             nid={item.nid}
             body_1={item.body_1}
             field_tags={item.field_tags}
+            created={item.created}
           />
           : tagArr.includes(tagId) && 
           <BlogCard 
+            key={item.nid}
             title={item.title}
             nid={item.nid}
             body_1={item.body_1}
             field_tags={item.field_tags}
+            created={item.created}
           />
         })
       }      
