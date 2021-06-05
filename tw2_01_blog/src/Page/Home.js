@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div>
-  
+      <FetchData />
       <h1>HOME PAGE</h1>
       <BlogListOne />
       <BlogListTwo />

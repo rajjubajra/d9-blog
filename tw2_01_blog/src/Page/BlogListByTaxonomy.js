@@ -3,13 +3,11 @@ import BlogListTwo from './Blog/BlogListTwo';
 
 
 function BlogListByTaxonomy() {
-
   let {tid} = useParams();
-  console.log({tid});
-
+  /** BLOG SORT BY TAG ID */ 
   return (
     <BlogListTwo tid={tid} />
-  )
+  )  
 }
 
 export default BlogListByTaxonomy
