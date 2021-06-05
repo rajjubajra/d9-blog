@@ -10,7 +10,7 @@ function MainMenu({showHideNav, data}) {
       data.map(item=>{
         return <div key={item.key}>
             <Link  
-            to={item.uri.replace("base:","")}
+            to={`/${item.uri.replace("base:","")}`}
             onClick={showHideNav}
             className="px-3 py-2">
               {item.title}
