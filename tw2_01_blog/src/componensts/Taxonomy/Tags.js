@@ -1,4 +1,5 @@
 import {useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 function Tags() {
   
@@ -12,7 +13,9 @@ function Tags() {
         state.length > 0 &&
         state.map(item=>{
           let tagname = item.name
-          return <div className="m-1 p-2" key={item.tid}>{tagname.substring(0,15)}</div>
+          return <div className="m-1 p-2" key={item.tid}>
+            <Link to={`/blogs-by-tag/${item.tid}`}>{tagname.substring(0,15)}</Link>
+            </div>
         })
       }
       </div>

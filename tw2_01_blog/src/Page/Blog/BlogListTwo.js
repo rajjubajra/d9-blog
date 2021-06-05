@@ -1,29 +1,35 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import BlogCard from './BlogCard';
 
 
-function BlogListTwo() {
+function BlogListTwo({tid}) {
 
   const data = useSelector(state=>state.reducerBlog.blog_data);
+  const tagId = tid ? tid : null;
+  console.log(tagId);
 
   return (
     <div>
+      {tagId && <h2 className="m-5">Tag Id: {tid}</h2>}
       {
         data.length > 0 &&
-        data.map(item=>{
-          return <ul className="p-5 border-1 border m-5 border-gray-300" key={item.nid}>
-            <li>
-              <div className="mb-4">
-                <h1 className="text-2xl">{item.title}</h1>
-                <div>
-                  <div dangerouslySetInnerHTML={{__html: item.body_1 + '...'}} />
-                </div>
-              </div>
-              <Link className="border border-gray-600 px-5 py-1" to={`/blog-post/${item.nid}`}>
-              More</Link>
-            </li>
-          </ul>
+        data.map(item=> {
+          // taxonomy Id comma separated value in to array
+          let tagArr = item.field_tags_1.split(',');
+          return tagId === null ?
+          <BlogCard 
+            title={item.title}
+            nid={item.nid}
+            body_1={item.body_1}
+            field_tags={item.field_tags}
+          />
+          : tagArr.includes(tagId) && 
+          <BlogCard 
+            title={item.title}
+            nid={item.nid}
+            body_1={item.body_1}
+            field_tags={item.field_tags}
+          />
         })
       }      
     </div>

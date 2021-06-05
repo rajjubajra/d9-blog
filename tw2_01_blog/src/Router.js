@@ -5,6 +5,7 @@ import Contact from './Page/Contact';
 import Blog from './Page/Blog';
 import MenuBar from './componensts/MainMenu/MenuBar';
 import BlogPost from './Page/BlogPost';
+import BlogListByTaxonomy from './Page/BlogListByTaxonomy';
 
 
 
@@ -22,6 +23,7 @@ function Router() {
         <Route path="/contact" component={Contact} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog-post/:nid" component={BlogPost} />
+        <Route path="/blogs-by-tag/:tid" component={BlogListByTaxonomy} />
       </Switch>
       </BrowserRouter>
     </div>
