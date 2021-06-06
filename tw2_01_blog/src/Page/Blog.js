@@ -2,6 +2,7 @@ import BlogListTwo from './Blog/BlogListTwo';
 import Tags from '../componensts/Taxonomy/Tags';
 import FormSelectDate from './Blog/FormSelectDate';
 import {useSelector} from 'react-redux';
+import BlogListOfTheMonth from './Blog/BlogListOfTheMonth';
 
 function Blog() {
   const YearMonth = useSelector(state => state.reducerBlogYearMonth.blog_YearMonth);
@@ -20,7 +21,7 @@ function Blog() {
         YearMonth === null ?
         <BlogListTwo />
         :
-        <h2>Year Month</h2>
+        <BlogListOfTheMonth YearMonth={YearMonth} />
       }
       
       

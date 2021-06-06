@@ -6,6 +6,7 @@ import Blog from './Page/Blog';
 import MenuBar from './componensts/MainMenu/MenuBar';
 import BlogPost from './Page/BlogPost';
 import BlogListByTaxonomy from './Page/BlogListByTaxonomy';
+import BlogSearch from './Page/BlogSearch';
 
 
 
@@ -24,6 +25,7 @@ function Router() {
         <Route path="/blog" component={Blog} />
         <Route path="/blog-post/:nid" component={BlogPost} />
         <Route path="/blogs-by-tag/:tid" component={BlogListByTaxonomy} />
+        <Route path="/blog-search" component={BlogSearch} />
       </Switch>
       </BrowserRouter>
     </div>

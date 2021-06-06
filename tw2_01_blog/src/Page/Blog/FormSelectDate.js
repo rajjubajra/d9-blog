@@ -59,6 +59,12 @@ function FormSelectDate() {
   /** Month Name array */
   const monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
+  //CLEAR SELECTED YEAR AND MONTH
+  const clearStates = () => (
+    setSelectedMonth('') &&
+    setSelectedYear('')
+  )
+
 
   return (
     <form>
@@ -79,6 +85,7 @@ function FormSelectDate() {
           })
         }
       </select>
+
     </form>
   )
 }
