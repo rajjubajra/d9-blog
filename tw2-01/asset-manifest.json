@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/d9-blog/react-js/tw2-01/static/css/main.6dba0783.chunk.css",
-    "main.js": "/d9-blog/react-js/tw2-01/static/js/main.96aeb4a9.chunk.js",
-    "main.js.map": "/d9-blog/react-js/tw2-01/static/js/main.96aeb4a9.chunk.js.map",
-    "runtime-main.js": "/d9-blog/react-js/tw2-01/static/js/runtime-main.bb94db10.js",
-    "runtime-main.js.map": "/d9-blog/react-js/tw2-01/static/js/runtime-main.bb94db10.js.map",
-    "static/js/2.ea7337fc.chunk.js": "/d9-blog/react-js/tw2-01/static/js/2.ea7337fc.chunk.js",
-    "static/js/2.ea7337fc.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/2.ea7337fc.chunk.js.map",
-    "static/js/3.29365054.chunk.js": "/d9-blog/react-js/tw2-01/static/js/3.29365054.chunk.js",
-    "static/js/3.29365054.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/3.29365054.chunk.js.map",
+    "main.css": "/d9-blog/react-js/tw2-01/static/css/main.2593e9ae.chunk.css",
+    "main.js": "/d9-blog/react-js/tw2-01/static/js/main.19687cdc.chunk.js",
+    "main.js.map": "/d9-blog/react-js/tw2-01/static/js/main.19687cdc.chunk.js.map",
+    "runtime-main.js": "/d9-blog/react-js/tw2-01/static/js/runtime-main.7389afab.js",
+    "runtime-main.js.map": "/d9-blog/react-js/tw2-01/static/js/runtime-main.7389afab.js.map",
+    "static/js/2.06cf6ba8.chunk.js": "/d9-blog/react-js/tw2-01/static/js/2.06cf6ba8.chunk.js",
+    "static/js/2.06cf6ba8.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/2.06cf6ba8.chunk.js.map",
+    "static/js/3.b7c0baab.chunk.js": "/d9-blog/react-js/tw2-01/static/js/3.b7c0baab.chunk.js",
+    "static/js/3.b7c0baab.chunk.js.map": "/d9-blog/react-js/tw2-01/static/js/3.b7c0baab.chunk.js.map",
     "index.html": "/d9-blog/react-js/tw2-01/index.html",
-    "static/css/main.6dba0783.chunk.css.map": "/d9-blog/react-js/tw2-01/static/css/main.6dba0783.chunk.css.map",
-    "static/js/2.ea7337fc.chunk.js.LICENSE.txt": "/d9-blog/react-js/tw2-01/static/js/2.ea7337fc.chunk.js.LICENSE.txt"
+    "static/css/main.2593e9ae.chunk.css.map": "/d9-blog/react-js/tw2-01/static/css/main.2593e9ae.chunk.css.map",
+    "static/js/2.06cf6ba8.chunk.js.LICENSE.txt": "/d9-blog/react-js/tw2-01/static/js/2.06cf6ba8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bb94db10.js",
-    "static/js/2.ea7337fc.chunk.js",
-    "static/css/main.6dba0783.chunk.css",
-    "static/js/main.96aeb4a9.chunk.js"
+    "static/js/runtime-main.7389afab.js",
+    "static/js/2.06cf6ba8.chunk.js",
+    "static/css/main.2593e9ae.chunk.css",
+    "static/js/main.19687cdc.chunk.js"
   ]
 }

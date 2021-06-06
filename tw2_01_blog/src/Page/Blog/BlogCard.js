@@ -14,7 +14,7 @@ function BlogCard({title, body_1, nid, field_tags, created }) {
   const monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   
   return (
-    <div className="p-5 border-1 border m-5 border-gray-300">
+    <div className="p-5 border-1 border my-5 border-gray-300">
         <div className="mb-4">
           <h1 className="text-2xl">{title}</h1>
           <div className="my-2 flex justify-end font-thin">

@@ -4,7 +4,8 @@ import thunk from 'redux-thunk';
 import {
   reducerMainNav, 
   reducerBlog,
-  reducerTaxonomy
+  reducerTaxonomy,
+  reducerBlogYearMonth
   
 } from './Reducer';
 
@@ -13,7 +14,8 @@ const reducer = combineReducers(
     // reducerFetchData,
     reducerMainNav,
     reducerBlog,
-    reducerTaxonomy
+    reducerTaxonomy,
+    reducerBlogYearMonth
   }
 );
 

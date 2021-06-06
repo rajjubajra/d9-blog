@@ -117,3 +117,14 @@ export const actionAll = () => {
 
   }
 }//ActionAll closed
+
+
+
+export const actionSetYearMonth = (YearMonth) => (
+  {
+    type: actionTypes.SELECTED_YEAR_MONTH,
+    YearMonth: YearMonth
+  }
+)
+
+

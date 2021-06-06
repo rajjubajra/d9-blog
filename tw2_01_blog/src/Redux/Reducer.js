@@ -114,4 +114,21 @@ export const reducerTaxonomy = (state = initialStateTaxonomy, action) => {
   }
 }
 
+/** SET BLOG SELECTION FOR THE MONTH OF THE YEAR */
+const initialStateYearMonth = {
+  blog_YearMonth: null
+}
+export const reducerBlogYearMonth = (state = initialStateYearMonth, action)=>{
+  switch(action.type){
+    case actionTypes.SELECTED_YEAR_MONTH:
+      return {
+        blog_YearMonth: action.YearMonth
+      }
+    default:
+      return state;
+  }
+
+}
+
+
 
