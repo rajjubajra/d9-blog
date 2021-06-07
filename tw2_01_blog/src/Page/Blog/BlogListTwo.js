@@ -36,10 +36,6 @@ function BlogListTwo({tid}) {
             setLastPage(lastPage)
           }else{
             setCurrentPage(currentPage + numberOfContent)
-            /** Calcultion of LastPage for odd number dataLength  */
-            /** eg Math.floor(105/10 + 105 % 10) | answer is 15 */
-            let endPage = Math.floor(dataLength/numberOfContent + dataLength % numberOfContent)
-
             setLastPage(lastPage + numberOfContent)
           } 
           SetPageNumber(pageNumber + 1);
@@ -99,8 +95,10 @@ function BlogListTwo({tid}) {
           pageNumber > 1 && <div onClick={() => setPage("prev")} className="ml-3">Prev</div>
         }
         <div>- Page {pageNumber}-</div> 
-        <div onClick={() => setPage("next")} className="mr-3">Next</div>
-        
+        {
+          lastPage <= dataLength &&
+          <div onClick={() => setPage("next")} className="mr-3">Next</div>
+        }
       </div>
       
     </div>
