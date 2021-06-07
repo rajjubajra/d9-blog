@@ -59,17 +59,12 @@ function FormSelectDate() {
   /** Month Name array */
   const monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
-  //CLEAR SELECTED YEAR AND MONTH
-  const clearStates = () => (
-    setSelectedMonth('') &&
-    setSelectedYear('')
-  )
-
+  
 
   return (
     <form>
       <select onChange={(e)=> setSelectedYear(e.target.value)}>
-       <option>-- Year --</option> 
+      <option>-- Year --</option> 
       {
         year.map((item, index)=>{
           return (<option key={index} value={item}>{item}</option>)
@@ -85,7 +80,6 @@ function FormSelectDate() {
           })
         }
       </select>
-
     </form>
   )
 }
