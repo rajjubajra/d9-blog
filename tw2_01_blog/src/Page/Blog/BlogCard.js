@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-function BlogCard({title, body_1, nid, field_tags, created }) {
+function BlogCard({title, body_1, nid, field_tags, created, index }) {
 
   /**
    *  --- Using getDate() ---
@@ -28,6 +28,7 @@ function BlogCard({title, body_1, nid, field_tags, created }) {
               More</Link>
           <p className="ml-10">Tag: {field_tags}</p>
         </div>
+        <div className="w-full text-xs mt-4 font-thin flex justify-center">Index - {index}</div>
     </div>
   )
 }
