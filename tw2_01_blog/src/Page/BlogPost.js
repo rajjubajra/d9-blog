@@ -17,9 +17,7 @@ function BlogPost() {
     e.preventDefault()
 
     const postComment ={
-      "_links":{
-        "type":{"href": `${baseurl.URL}/rest/type/comment/comment`}
-      },
+      
         "entity_id":[{"target_id": `${nid}`}],
         "subject":[{"value":"Comment title"}],
         "entity_type":[{"value":"node"}],
