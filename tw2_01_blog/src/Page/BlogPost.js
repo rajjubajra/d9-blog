@@ -12,6 +12,7 @@ function BlogPost() {
   const state = useSelector(state => state.reducerBlog.blog_data );
 
   const [comment, setComment] = useState('');
+  const [commentTitle, setCommentTitle] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -19,7 +20,7 @@ function BlogPost() {
     const postComment ={
 
         "entity_id":[{"target_id": `${nid}`}],
-        "subject":[{"value":"Comment title"}],
+        "subject":[{"value": `${commentTitle}`}],
         "entity_type":[{"value":"node"}],
         "comment_type":[{"target_id":"comment"}],
         "field_name":[{"value":"comment"}],
@@ -36,7 +37,7 @@ function BlogPost() {
     }
   }
   
-
+  console.log(comment, commentTitle);
   return (
     <div>
     { state.length > 0 &&
@@ -54,13 +55,25 @@ function BlogPost() {
 
             <div className="mt-10">
             <form onSubmit={handleSubmit} className="flex flex-col">
-              <textarea 
+              <div>
+                <input type="text"
+                  className="mb-3 border border-gray-600 p-3"
+                  name="title"
+                  onChange={(e)=>setCommentTitle(e.target.value)}
+                  value={commentTitle}
+                  placeholder="Title"
+                />
+              </div>
+              <div>
+                <textarea 
               className="mb-3 border border-gray-600 h-36 p-3"
               name="comment"
               onChange={(e)=> setComment(e.target.value)}
               value={comment}
               placeholder="Comment.."
               ></textarea>
+              </div>
+              
               <input 
               className="border border-gray-600"
               type="submit"  
