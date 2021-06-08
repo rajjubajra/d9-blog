@@ -1,8 +1,6 @@
 import {useParams} from 'react-router-dom';
 import {useSelector} from 'react-redux';
-import {useState, useEffect} from 'react';
-import axios from 'axios';
-import {baseurl} from '../config/baseurl';
+import {useState} from 'react';
 import ajax from '../config/ajax';
 
 function BlogPost() {
@@ -25,13 +23,13 @@ function BlogPost() {
         "comment_type":[{"target_id":"comment"}],
         "field_name":[{"value":"comment"}],
         "comment_body":[{"value": `${comment}`,
-                      "basic_html":"basic_html"}],
+                      "basic_html":"basic_html"}]
 
     }
     try{
       const axios = await ajax()// wait for initialized axios object
       const response = await axios.post('/comment', postComment)// wait for the POST AJAX request to complete
-      console.log('Node created :', response)
+      console.log('Node created :', response.status)
     }catch(e){
       alert(e)
     }
