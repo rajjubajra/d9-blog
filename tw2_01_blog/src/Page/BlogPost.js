@@ -23,7 +23,7 @@ function BlogPost() {
         "entity_type":[{"value":"node"}],
         "comment_type":[{"target_id":"comment"}],
         "field_name":[{"value":"comment"}],
-        "comment_body":[{"value":{comment},
+        "comment_body":[{"value": `${comment}`,
                       "basic_html":"basic_html"}],
 
     }
