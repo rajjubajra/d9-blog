@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {baseurl} from '../config/baseurl';
+import ajax from '../config/ajax';
 
 function BlogPost() {
 
@@ -12,12 +13,12 @@ function BlogPost() {
 
   const [comment, setComment] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     const postComment ={
       "_links":{
-        "type":{"href": `${baseurl.URL}/resty/type/comment/comment`}
+        "type":{"href": `${baseurl.URL}/rest/type/comment/comment`}
       },
         "entity_id":[{"target_id": `${nid}`}],
         "subject":[{"value":"Comment title"}],
@@ -26,22 +27,17 @@ function BlogPost() {
         "field_name":[{"value":"comment"}],
         "comment_body":[{"value":"Body text for the comment.",
                       "basic_html":"basic_html"}],
+
     }
-    console.log(postComment);
-    
-    axios({
-      url: `${baseurl.URL}/comment/`,
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': `${baseurl.URL}/session/token`
-      },
-      data: JSON.stringify(postComment)
-    })
-    .then(res => console.log("success", res))
-    .catch(err => console.log("Err", err))   
+    try{
+      const axios = await ajax()// wait for initialized axios object
+      const response = await axios.post('/comment', postComment)// wait for the POST AJAX request to complete
+      console.log('Node created :', response)
+    }catch(e){
+      alert(e)
+    }
   }
-  console.log(comment);
+  
 
   return (
     <div>
