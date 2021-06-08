@@ -17,13 +17,13 @@ function BlogPost() {
     e.preventDefault()
 
     const postComment ={
-      
+
         "entity_id":[{"target_id": `${nid}`}],
         "subject":[{"value":"Comment title"}],
         "entity_type":[{"value":"node"}],
         "comment_type":[{"target_id":"comment"}],
         "field_name":[{"value":"comment"}],
-        "comment_body":[{"value":"Body text for the comment.",
+        "comment_body":[{"value":{comment},
                       "basic_html":"basic_html"}],
 
     }
