@@ -16,10 +16,10 @@ function BlogPost() {
     /** Logged status returns 1 or 0 value */
     let status = `${baseurl.URL}/user/login_status?_format=json`;
     setLogInSatus( status === 1 ? true : false);
-    console.log("status",status);
+    console.log("status", status);
   },[])
 
-  console.log("login  Status",logInStatus);
+  console.log("login-Status",logInStatus);
 
 
 
