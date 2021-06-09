@@ -29,7 +29,7 @@ function BlogPost() {
     try{
       const axios = await ajax()// wait for initialized axios object
       const response = await axios.post('/comment', postComment)// wait for the POST AJAX request to complete
-      console.log('Node created :', response.Object)
+      console.log('Node created :', response.Object.status)
     }catch(e){
       alert(e)
     }
@@ -53,6 +53,7 @@ function BlogPost() {
 
             <div className="mt-10">
             <form onSubmit={handleSubmit} className="flex flex-col">
+              <h1>Comment Form</h1>
               <div>
                 <input type="text"
                   className="mb-3 border border-gray-600 p-3"
