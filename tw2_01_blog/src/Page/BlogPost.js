@@ -29,7 +29,7 @@ function BlogPost() {
     try{
       const axios = await ajax()// wait for initialized axios object
       const response = await axios.post('/comment', postComment)// wait for the POST AJAX request to complete
-      console.log('Node created :', response.status)
+      console.log('Node created :', response.Object)
     }catch(e){
       alert(e)
     }
