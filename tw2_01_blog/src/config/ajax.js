@@ -37,5 +37,7 @@ export default async () => {
       console.error(error)
     }
   }
+  console.log("SINGLETON",singleton);
   return singleton
+
 }

@@ -11,6 +11,10 @@ function BlogPost() {
 
   const [comment, setComment] = useState('');
   const [commentTitle, setCommentTitle] = useState('');
+  // const [hideForm, setHideForm] = useState(true);
+  // const [token, setToken] = useState(false);
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -35,7 +39,7 @@ function BlogPost() {
     }
   }
   
-  console.log(comment, commentTitle);
+
   return (
     <div>
     { state.length > 0 &&
@@ -51,6 +55,7 @@ function BlogPost() {
               <div dangerouslySetInnerHTML={{__html: item.body}} />
             </div>
 
+            {/** COMMENT FORM */}
             <div className="mt-10">
             <form onSubmit={handleSubmit} className="flex flex-col">
               <h1>Comment Form</h1>
