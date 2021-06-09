@@ -10,7 +10,7 @@ function BlogPost() {
   
   const state = useSelector(state => state.reducerBlog.blog_data );
 
-  const [ logInStatus, setLogInSatus ] = useState(false);
+  const [ logInStatus, setLogInSatus ] = useState('');
 
   useEffect(()=>{
     /** Logged status returns 1 or 0 value */
@@ -36,9 +36,7 @@ function BlogPost() {
             </div>
 
             <div className={`${logInStatus ? 'block':'hidden'}`}>
-
               <BlogPostCommentForm nid={nid} />
-              
             </div>
             <div className={`${logInStatus ? 'hidden' : 'block mt-10'}`}> 
               <p>Please Login for comment</p>
