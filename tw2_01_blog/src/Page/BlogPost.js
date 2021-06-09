@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {useState, useEffect} from 'react';
 import {baseurl} from '../config/baseurl';
 import BlogPostCommentForm from './Blog/BlogPostCommentForm';
+import axios from 'axios';
 
 function BlogPost() {
 
@@ -13,10 +14,22 @@ function BlogPost() {
   const [ logInStatus, setLogInSatus ] = useState('');
 
   useEffect(()=>{
+    
     /** Logged status returns 1 or 0 value */
-    let status = `${baseurl.URL}/user/login_status?_format=json`;
-    setLogInSatus( status === 1 ? true : false);
-    console.log("status", status);
+    let url = `${baseurl.URL}/user/login_status?_format=json`;
+    axios.get({
+      method: 'GET',
+      url: url,
+      headers: {
+        'Accept': 'application/vnd.api+json'
+        }
+    })
+    .then(res => {
+      console.log("LOGIN STATUS",res.data);
+      res.data === 1 ? setLogInSatus(true) : setLogInSatus(false);
+    })
+    .catch(err => console.log("ERROR USER LOGIN STATUS", err))
+
   },[])
 
   console.log("login-Status",logInStatus);
