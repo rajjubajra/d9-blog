@@ -17,7 +17,7 @@ function BlogPost() {
     
     /** Logged status returns 1 or 0 value */
     let url = `${baseurl.URL}/user/login_status?_format=json`;
-    axios.get({
+    axios({
       method: 'GET',
       url: url,
       headers: {
