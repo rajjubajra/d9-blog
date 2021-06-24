@@ -10,13 +10,11 @@ function BlogPost() {
   let {nid} = useParams();
   
   const state = useSelector(state => state.reducerBlog.blog_data );
-
+  let url = `${baseurl.URL}/user/login_status?_format=json`;
   const [ logInStatus, setLogInSatus ] = useState('');
 
-  useEffect(()=>{
-    
-    /** Logged status returns 1 or 0 value */
-    let url = `${baseurl.URL}/user/login_status?_format=json`;
+  useEffect(()=>{ 
+    /** Logged status returns 1 or 0 value */  
     axios({
       method: 'GET',
       url: url,
@@ -30,7 +28,7 @@ function BlogPost() {
     })
     .catch(err => console.log("ERROR USER LOGIN STATUS", err))
 
-  },[])
+  },[url])
 
   console.log("login-Status",logInStatus);
 
@@ -50,7 +48,7 @@ function BlogPost() {
             <div>
               <div dangerouslySetInnerHTML={{__html: item.body}} />
             </div>
-
+            {/** COMMENT FORM */}
             <div className={`${logInStatus ? 'block':'hidden'}`}>
               <BlogPostCommentForm nid={nid} />
             </div>
