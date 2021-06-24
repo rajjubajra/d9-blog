@@ -8,6 +8,10 @@ const {src, dest, watch, series} = require('gulp');
  * 
  */
 
+/** IMPORTANT: 
+ * Change working project Folder 
+ * in following "src" and "watch" */
+
 function moveFiles(){
   return src('./tw2_01_blog/build/**/*.*')
   .pipe(dest('./tw2-01'))
