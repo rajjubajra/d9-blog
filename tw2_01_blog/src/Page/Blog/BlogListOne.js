@@ -7,6 +7,8 @@ function BlogListOne() {
 
   const data = useSelector(state=>state.reducerBlog.blog_data);
 
+  console.log("chu jula?",data);
+
   return (
     <div>
       {
