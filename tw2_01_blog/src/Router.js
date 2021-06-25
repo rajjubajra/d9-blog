@@ -19,7 +19,7 @@ function Router() {
       <BrowserRouter>
         <MenuBar />
       <Switch>
-        <Route path="https://yellow-website.com/d9-blog/react-js/tw2-01/" component={Home} />
+        <Route path="/d9-blog/react-js/tw2-01/" component={Home} />
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
