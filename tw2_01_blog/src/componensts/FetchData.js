@@ -10,7 +10,7 @@ function FetchData() {
 
   useEffect(()=>{
     console.log("test");
-    state === [] && dispatch(actionAll());
+    dispatch(actionAll());
   },[dispatch, state]);
 
   return (
