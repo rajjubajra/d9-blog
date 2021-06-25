@@ -6,6 +6,6 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . https://yellow-website.com/d9-blog/react-js/tw2-01/index.html [L]
+  RewriteRule . /index.html [L]
 
 </IfModule>
