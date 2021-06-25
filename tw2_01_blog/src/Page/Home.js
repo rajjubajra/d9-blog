@@ -5,6 +5,7 @@ import FetchData from '../componensts/FetchData';
 
 function Home() {
 
+  console.log("HOME PAGE")
   return (
     <div>
       <FetchData />
