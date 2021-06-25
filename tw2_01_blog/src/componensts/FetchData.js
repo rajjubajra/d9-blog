@@ -6,7 +6,6 @@ import {actionAll} from '../Redux/Action';
 function FetchData() {
 
   const dispatch = useDispatch();
-  
 
   useEffect(()=>{
     console.log("test");

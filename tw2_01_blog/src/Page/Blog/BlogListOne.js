@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 
-function BlogListOne({data}) {
+function BlogListOne() {
 
+  const data = useSelector(state=>state.reducerBlog.blog_data);
 
   return (
     <div>

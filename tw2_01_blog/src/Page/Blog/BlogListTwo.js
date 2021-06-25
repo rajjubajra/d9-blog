@@ -1,10 +1,11 @@
 import {useState, useEffect} from 'react';
+import {useSelector} from 'react-redux';
 import BlogCard from './BlogCard';
 
 
-function BlogListTwo({tid, data}) {
+function BlogListTwo({tid}) {
 
-  
+  const data = useSelector(state=>state.reducerBlog.blog_data);
   const dataLength = data.length + 5;
   const tagId = tid ? tid : null;
   console.log(tagId);
@@ -22,7 +23,7 @@ function BlogListTwo({tid, data}) {
     setPageCount()
   },[data, currentPage, lastPage])
   
-  console.log("Pages", currentPage, lastPage, pageCount);
+  console.log("Pages", currentPage, lastPage);
 
   const setPage = (clickType) =>{
 
