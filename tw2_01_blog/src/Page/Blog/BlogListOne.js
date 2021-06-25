@@ -1,13 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux';
 
 
-function BlogListOne() {
-
-  const data = useSelector(state=>state.reducerBlog.blog_data);
-
-  console.log("chu jula?",data);
+function BlogListOne({data}) {
 
   return (
     <div>

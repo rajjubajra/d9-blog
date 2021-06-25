@@ -3,9 +3,8 @@ import {useSelector} from 'react-redux';
 import BlogCard from './BlogCard';
 
 
-function BlogListTwo({tid}) {
+function BlogListTwo({tid, data}) {
 
-  const data = useSelector(state=>state.reducerBlog.blog_data);
   const dataLength = data.length + 5;
   const tagId = tid ? tid : null;
   console.log(tagId);
