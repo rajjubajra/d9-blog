@@ -8,6 +8,8 @@ function Home() {
 
   const data = useSelector(state=>state.reducerBlog.blog_data);
 
+  console.log("DATA?", data);
+
   return (
     <div>
       <FetchData />

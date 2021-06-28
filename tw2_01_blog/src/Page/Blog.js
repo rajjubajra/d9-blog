@@ -5,7 +5,9 @@ import {useSelector} from 'react-redux';
 import BlogListOfTheMonth from './Blog/BlogListOfTheMonth';
 
 function Blog() {
+  
   const YearMonth = useSelector(state => state.reducerBlogYearMonth.blog_YearMonth);
+  const data = useSelector(state=>state.reducerBlog.blog_data);
   
   return (
     <div className="m-10">
@@ -19,7 +21,7 @@ function Blog() {
       <Tags />
       {
         YearMonth === null ?
-        <BlogListTwo />
+        <BlogListTwo data={data} />
         :
         <BlogListOfTheMonth YearMonth={YearMonth} />
       }

@@ -22,11 +22,13 @@ function FormSelectDate() {
     state && state.map(item => {
       let blog_yr = new Date(item.created).getFullYear();
       yr.push(blog_yr);
+      /** create new Array removing duplicate Year */
       let unqYr =  [...new Set(yr)];
       /** SET AVAILABLE YEAR FOR THE BLOG SELECTION */
       setYear(unqYr);
     })
   },[state])
+
 
   /** CAREATE month ARRAY AND UPDATE selectedMonth */
   useEffect(()=>{
@@ -39,6 +41,7 @@ function FormSelectDate() {
       if( parseInt(selectedYear) === blog_yr){
         mn.push(blog_mn);
       }
+      /** Create month Array Removing duplicate months */
       let unqMn = [...new Set(mn)];
       /** SET AVAILABLE MONTH FOR THE BLOG SELECTION */
       setMonth(unqMn);
@@ -75,9 +78,11 @@ function FormSelectDate() {
       <select onChange={(e)=> setSelectedMonth(e.target.value)}>
         <option>-- Month --</option>
         {
+          month.length > 0 ?
           month.map((item,index)=>{
             return <option key={index} value={item}>{monthArr[item]}</option>
           })
+          : <option>- Select Year -</option>
         }
       </select>
     </form>
