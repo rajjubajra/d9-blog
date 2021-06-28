@@ -37,7 +37,7 @@ function BlogListOne({data}) {
           return <ul key={item.nid}>
             <li>
               <Link 
-              onClick={updateViewCount}
+              onClick={updateViewCount(item.nid, item.totalcount, item.daycount, item.timestamp)}
               to={`/blog-post/${item.nid}`}>{item.title}</Link>
             </li>
           </ul>
