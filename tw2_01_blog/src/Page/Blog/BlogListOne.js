@@ -1,30 +1,33 @@
 import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux'; 
+import ajax from '../../config/ajax';
 
 
 function BlogListOne({data}) {
 
   const state = useSelector(state => state.reducerBlog.blog_data.state)
 
-  const updateViewCount = async (nid,timestamp ) =>{
-  
-      function nodeExists(nid){
-        return state.some(function(el){
-          return el.nid === nid;
-        })
+  const updateViewCount = async (nid, totalcount, daycount, timestamp ) =>{
+    
+    const postViewCounter ={
+      "entity_id":[{"target_id": `${nid}`}],
+      "entity_type":[{"value":"node_counter"}],
+      "totalcount":[{"value": `${totalcount}`}],
+      "daycount":[{"value": `${daycount}`}],
+      "timestamp":[{"value": `${timestamp}`}],
+    }
+    try{
+      const axios = await ajax()// wait for initialized axios object
+      const response = await axios.post('/', postViewCounter)// wait for the POST AJAX request to complete
+      console.log('View Count posted :', response.status)
+      if(response.status === 201)
+      {
+        console.log('View Count posted success');
       }
-
-      console.log("NID EXITS", nodeExists);
-
-      let today = new Date();
-      console.log(today);
-
-      function timestampExists(){
-        return state.some(function(el){
-          return el.timestamp === today;
-        })
-      }
-    console.log("today", timestampExists);
+    }catch(e){
+      alert(e)
+    }
+      
 
   }
 
@@ -37,7 +40,7 @@ function BlogListOne({data}) {
           return <ul key={item.nid}>
             <li>
               <Link 
-              onClick={() => updateViewCount(item.nid, item.timestamp)}
+              onClick={() => updateViewCount(item.nid, 999, 55 ,1362281532)}
               to={`/blog-post/${item.nid}`}>{item.title}</Link>
             </li>
           </ul>
