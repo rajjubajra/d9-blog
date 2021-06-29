@@ -6,7 +6,7 @@ function BlogListOne({data}) {
 
   const state = useSelector(state => state.reducerBlog.blog_data.state)
 
-  const updateViewCount = async (nid, totalcount, daycount, timestamp ) =>{
+  const updateViewCount = async (nid,timestamp ) =>{
   
       function nodeExists(nid){
         return state.some(function(el){
@@ -37,7 +37,7 @@ function BlogListOne({data}) {
           return <ul key={item.nid}>
             <li>
               <Link 
-              onClick={updateViewCount(item.nid, item.totalcount, item.daycount, item.timestamp)}
+              onClick={() => updateViewCount(item.nid, item.timestamp)}
               to={`/blog-post/${item.nid}`}>{item.title}</Link>
             </li>
           </ul>

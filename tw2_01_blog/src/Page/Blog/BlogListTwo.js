@@ -57,7 +57,7 @@ function BlogListTwo({tid, data}) {
   }
 
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3" >
       {tagId && <h2 className="m-5">Tag Id: {tid}</h2>}
       {
         pages.length > 0 &&
