@@ -13,11 +13,11 @@ function BlogPostCommentForm({nid}) {
 
     const postComment ={
 
-        "entity_id":[{"target_id": `${nid}`}],
-        "subject":[{"value": `${commentTitle}`}],
-        "entity_type":[{"value":"node"}],
+        "entity_id":   [{"target_id": `${nid}`}],
+        "subject":     [{"value": `${commentTitle}`}],
+        "entity_type": [{"value":"node"}],
         "comment_type":[{"target_id":"comment"}],
-        "field_name":[{"value":"comment"}],
+        "field_name":  [{"value":"comment"}],
         "comment_body":[{"value": `${comment}`,
                       "basic_html":"basic_html"}]
     }
