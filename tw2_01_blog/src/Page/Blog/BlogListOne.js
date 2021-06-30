@@ -10,7 +10,7 @@ function BlogListOne({data}) {
   const updateViewCount = async (nid, totalcount, daycount, timestamp ) =>{
     
     const postViewCounter = {
-      "id": [{"value": "node_counter"}],
+      "entity_type":[{"value":"node_counter"}],
       "nid": [{"value": `${nid}`}],
       "totalcount": [{"value": `${totalcount}`}],
       "daycount":[{"value": `${daycount}`}],
