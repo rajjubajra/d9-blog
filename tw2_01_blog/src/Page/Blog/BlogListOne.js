@@ -18,7 +18,7 @@ function BlogListOne({data}) {
     }
     try{
       const axios = await ajax()// wait for initialized axios object
-      const response = await axios.post('/node_counter', postViewCounter)// wait for the POST AJAX request to complete
+      const response = await axios.post('/node', postViewCounter)// wait for the POST AJAX request to complete
       console.log('View Count posted :', response.status)
       if(response.status === 201)
       {
@@ -40,7 +40,7 @@ function BlogListOne({data}) {
           return <ul key={item.nid}>
             <li>
               <Link 
-              onClick={() => updateViewCount(item.nid, 999, 55 ,1362281532)}
+              onClick={() => updateViewCount(item.nid,99,5,1362281532)}
               to={`/blog-post/${item.nid}`}>{item.title}</Link>
             </li>
           </ul>
