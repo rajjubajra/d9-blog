@@ -18,7 +18,7 @@ function BlogListOne({data}) {
     }
     try{
       const axios = await ajax()// wait for initialized axios object
-      const response = await axios.post('/', postViewCounter)// wait for the POST AJAX request to complete
+      const response = await axios.post('/node', postViewCounter)// wait for the POST AJAX request to complete
       console.log('View Count posted :', response.status)
       if(response.status === 201)
       {
