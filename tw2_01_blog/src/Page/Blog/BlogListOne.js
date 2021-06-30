@@ -10,7 +10,7 @@ function BlogListOne({data}) {
   const updateViewCount = async (nid, totalcount, daycount, timestamp ) =>{
     
     const postViewCounter = {
-      "type":[{"target_id":"node_counter"}],
+      "type":[{"target_id":"counter"}],
       "nid": [{"value": `${nid}`}],
       "totalcount": [{"value": `${totalcount}`}],
       "daycount":[{"value": `${daycount}`}],
@@ -18,7 +18,7 @@ function BlogListOne({data}) {
     }
     try{
       const axios = await ajax()// wait for initialized axios object
-      const response = await axios.post('/entity/node', postViewCounter)// wait for the POST AJAX request to complete
+      const response = await axios.post('/node', postViewCounter)// wait for the POST AJAX request to complete
       console.log('View Count posted :', response.status)
       if(response.status === 201)
       {
