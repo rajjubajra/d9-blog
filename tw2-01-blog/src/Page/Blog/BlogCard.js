@@ -54,7 +54,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
               More</Link>
           <p className="ml-10">Tag: {
             tag.length > 0 &&
-            tag.forEach(item => item + ',')
+            tag.forEach(item => {return item + ','})
             }</p>
         </div>
         <div className="w-full text-xs mt-4 font-thin flex justify-center">Index - {index}</div>
