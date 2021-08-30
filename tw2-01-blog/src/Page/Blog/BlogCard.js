@@ -26,15 +26,17 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
     tag_arr.length > 0 &&
     tag_arr.map((item) => {
       return newArr.push(item.substring(0,20));
-    })
+    })   
     
     setTag(newArr);
     
-
   },[field_tags])
   
   console.log("TAG NEW",tag);
 
+  const ViewTags = (tag) => {
+    return tag.forEach(item => { return item + ','})
+  }
 
 
   const monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -52,10 +54,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
         <div className="flex flex-row">
           <Link className="border border-gray-600 px-5 py-1" to={`/blog-post/${nid}`}>
               More</Link>
-          <p className="ml-10">Tag: {
-            tag.length > 0 &&
-            tag.forEach(item => {return item + ','})
-            }</p>
+          <p className="ml-10">Tag: {ViewTags(tag)}</p>
         </div>
         <div className="w-full text-xs mt-4 font-thin flex justify-center">Index - {index}</div>
     </div>
