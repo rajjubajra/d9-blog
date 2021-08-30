@@ -11,7 +11,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
    *  console.log(day); // 25
    */
 
-  const [tag, setTag] = useState([]);
+  const [tag, setTag] = useState('');
   let dt = new Date(created);
   //console.log("DATE?", dt.getFullYear());
 
@@ -28,15 +28,13 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
       return newArr.push(item.substring(0,20));
     })   
     
-    setTag(newArr);
+    setTag(newArr.join(","));
     
   },[field_tags])
   
+
   console.log("TAG NEW",tag);
 
-  const ViewTags = (tag) => {
-    return tag.forEach(item => { return item + ','})
-  }
 
 
   const monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -54,7 +52,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
         <div className="flex flex-row">
           <Link className="border border-gray-600 px-5 py-1" to={`/blog-post/${nid}`}>
               More</Link>
-          <p className="ml-10">Tag: {ViewTags(tag)}</p>
+          <p className="ml-10">Tag: {tag}</p>
         </div>
         <div className="w-full text-xs mt-4 font-thin flex justify-center">Index - {index}</div>
     </div>
