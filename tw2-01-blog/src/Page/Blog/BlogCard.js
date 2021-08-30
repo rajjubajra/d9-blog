@@ -25,7 +25,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
     const newArr = []
     tag_arr.length > 0 &&
     tag_arr.map((item) => {
-      return newArr.push(item.substring(0,12).toUpperCase() + item.slice(1)); //capitalized
+      return newArr.push(item.substring(0,12).toUpperCase()); 
     })   
     
     setTag(newArr.join(","));
@@ -52,7 +52,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
         <div className="flex flex-row">
           <Link className="border border-gray-600 px-5 py-1" to={`/blog-post/${nid}`}>
               More</Link>
-          <p className="ml-10">Tag: {tag}</p>
+          <p className="ml-10 text-sm">Tag: {tag}</p>
         </div>
         <div className="w-full text-xs mt-4 font-thin flex justify-center">Index - {index}</div>
     </div>
