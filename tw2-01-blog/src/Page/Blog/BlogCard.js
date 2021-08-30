@@ -25,7 +25,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
     const newArr = []
     tag_arr.length > 0 &&
     tag_arr.map((item) => {
-      return newArr.push(item.substring(0,12).toUpperCase());
+      return newArr.push(item.substring(0,12).toUpperCase() + item.slice(1)); //capitalized
     })   
     
     setTag(newArr.join(","));
