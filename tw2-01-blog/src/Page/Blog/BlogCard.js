@@ -11,6 +11,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
    *  console.log(day); // 25
    */
 
+  const [tag, setTag] = useState([]);
   let dt = new Date(created);
   //console.log("DATE?", dt.getFullYear());
 
@@ -21,11 +22,18 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
    */
     const tag_arr = field_tags.split(',');
     console.log("TAG ARRAY",tag_arr);
+    const newArr = []
+    tag_arr.length > 0 &&
+    tag_arr.map((item) => {
+      return newArr.push(item.substring(0,20));
+    })
+    
+    setTag(newArr);
     
 
   },[field_tags])
   
-  console.log(field_tags)
+  console.log("TAG NEW",tag);
 
 
 
