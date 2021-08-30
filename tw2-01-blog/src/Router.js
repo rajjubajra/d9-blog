@@ -14,13 +14,13 @@ function Router() {
 
   return (
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/blog-post/:nid" component={BlogPost} />
-        <Route path="/blogs-by-tag/:tid" component={BlogListByTaxonomy} />
-        <Route path="/blog-search" component={BlogSearch} />
+        <Route exact path="/d9-blog/themes/tw2-01" component={Home} />
+        <Route path="/d9-blog/themes/tw2-01/about" component={About} />
+        <Route path="/d9-blog/themes/tw2-01/contact" component={Contact} />
+        <Route path="/d9-blog/themes/tw2-01/blog" component={Blog} />
+        <Route path="/d9-blog/themes/tw2-01/blog-post/:nid" component={BlogPost} />
+        <Route path="/d9-blog/themes/tw2-01/blogs-by-tag/:tid" component={BlogListByTaxonomy} />
+        <Route path="/d9-blog/themes/tw2-01/blog-search" component={BlogSearch} />
       </Switch>
   )
 }
