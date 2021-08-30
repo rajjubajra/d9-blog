@@ -52,7 +52,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
         <div className="flex flex-row">
           <Link className="border border-gray-600 px-5 py-1" to={`/blog-post/${nid}`}>
               More</Link>
-          <p className="ml-10 text-sm">Tag: {tag}</p>
+          <p className="ml-10 text-xs font-bold">Tag: {tag}</p>
         </div>
         <div className="w-full text-xs mt-4 font-thin flex justify-center">Index - {index}</div>
     </div>
