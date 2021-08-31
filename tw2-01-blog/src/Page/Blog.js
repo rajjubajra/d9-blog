@@ -8,6 +8,9 @@ function Blog() {
   
   const YearMonth = useSelector(state => state.reducerBlogYearMonth.blog_YearMonth);
   const data = useSelector(state=>state.reducerBlog.blog_data);
+
+  console.log("data",data);
+
   
   return (
     <div className="m-10">
