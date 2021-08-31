@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import {useState, useEffect} from 'react';
-
+import {baseurl_nav} from '../../config/baseurl';
 
 function BlogCard({title, body_1, nid, field_tags, created, index }) {
 
@@ -47,7 +47,9 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
           </div>
         </div>
         <div className="flex flex-row">
-          <Link className="border border-gray-600 px-5 py-1" to={`/blog-post/${nid}`}>
+          <Link 
+          className="border border-gray-600 px-5 py-1" 
+          to={`${baseurl_nav.URL}/blog-post/${nid}`}>
               More</Link>
           <p className="ml-10 text-xs font-bold">Tag: {tag}</p>
         </div>
