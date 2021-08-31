@@ -4,6 +4,8 @@ import BlogCard from './BlogCard';
 
 function BlogListTwo({tid, data}) {
 
+  console.log("DATA ? ",data);
+
   const dataLength = data.length + 5;
   const tagId = tid ? tid : null;
   console.log(tagId);
@@ -85,7 +87,6 @@ function BlogListTwo({tid, data}) {
             index={index}
           />      
         })
-
       }   
 
       <div className="flex justify-center">
@@ -98,7 +99,6 @@ function BlogListTwo({tid, data}) {
           <div onClick={() => setPage("next")} className="mr-3">Next</div>
         }
       </div>
-      
     </div>
   )
 }

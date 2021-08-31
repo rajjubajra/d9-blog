@@ -11,7 +11,6 @@ function Blog() {
 
   console.log("data",data);
 
-  
   return (
     <div className="m-10">
       
@@ -28,8 +27,6 @@ function Blog() {
         :
         <BlogListOfTheMonth YearMonth={YearMonth} />
       }
-      
-      
     </div>
   )
 }

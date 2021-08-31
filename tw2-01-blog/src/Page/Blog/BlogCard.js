@@ -32,10 +32,7 @@ function BlogCard({title, body_1, nid, field_tags, created, index }) {
     
   },[field_tags])
   
-
-  console.log("TAG NEW",tag);
-
-
+  //console.log("TAG NEW",tag);
 
   const monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   
