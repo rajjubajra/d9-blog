@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux'; 
 import ajax from '../../config/ajax';
+import {baseurl_nav} from '../../config/baseurl';
 
 
 function BlogListOne({data}) {
@@ -41,7 +42,7 @@ function BlogListOne({data}) {
             <li>
               <Link 
               onClick={() => updateViewCount(item.nid,99,5,1362281532)}
-              to={`/blog-post/${item.nid}`}>{item.title}</Link>
+              to={`${baseurl_nav.URL}/blog-post/${item.nid}`}>{item.title}</Link>
             </li>
           </ul>
         })

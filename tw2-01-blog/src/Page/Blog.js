@@ -1,11 +1,10 @@
-import {useEffect} from 'react';
-
+//import {useEffect} from 'react';
 import BlogListTwo from './Blog/BlogListTwo';
 import Tags from '../componensts/Taxonomy/Tags';
 import FormSelectDate from './Blog/FormSelectDate';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import BlogListOfTheMonth from './Blog/BlogListOfTheMonth';
-import {actionAll} from '../Redux/Action';
+//import {actionAll} from '../Redux/Action';
 
 function Blog() {
   
@@ -13,11 +12,11 @@ function Blog() {
   const data = useSelector(state=>state.reducerBlog.blog_data);
 
   console.log("data",data);
-  const dispatch = useDispatch();
+//  const dispatch = useDispatch();
 
-useEffect(()=>{
-  dispatch(actionAll());
-},[dispatch])
+// useEffect(()=>{
+//   dispatch(actionAll());
+// },[dispatch])
 
 
   return (
