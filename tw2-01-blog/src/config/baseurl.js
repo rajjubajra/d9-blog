@@ -1,5 +1,5 @@
 export const baseurl = {
-    URL: "https://yellow-website.com/d9-blog/d9-blog"
+    URL: "https://themes.rdbajra.com/d9-blog/d9-blog"
 }
 
 export const baseurl_nav = {
