@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/d9-blog/react-js/b5-01/static/css/main.855c4370.chunk.css",
+    "main.js": "/d9-blog/react-js/b5-01/static/js/main.ff33a203.chunk.js",
+    "main.js.map": "/d9-blog/react-js/b5-01/static/js/main.ff33a203.chunk.js.map",
+    "runtime-main.js": "/d9-blog/react-js/b5-01/static/js/runtime-main.53e2f044.js",
+    "runtime-main.js.map": "/d9-blog/react-js/b5-01/static/js/runtime-main.53e2f044.js.map",
+    "static/css/2.61b4cb56.chunk.css": "/d9-blog/react-js/b5-01/static/css/2.61b4cb56.chunk.css",
+    "static/js/2.f737d484.chunk.js": "/d9-blog/react-js/b5-01/static/js/2.f737d484.chunk.js",
+    "static/js/2.f737d484.chunk.js.map": "/d9-blog/react-js/b5-01/static/js/2.f737d484.chunk.js.map",
+    "static/js/3.83cfa303.chunk.js": "/d9-blog/react-js/b5-01/static/js/3.83cfa303.chunk.js",
+    "static/js/3.83cfa303.chunk.js.map": "/d9-blog/react-js/b5-01/static/js/3.83cfa303.chunk.js.map",
+    "index.html": "/d9-blog/react-js/b5-01/index.html",
+    "static/css/2.61b4cb56.chunk.css.map": "/d9-blog/react-js/b5-01/static/css/2.61b4cb56.chunk.css.map",
+    "static/css/main.855c4370.chunk.css.map": "/d9-blog/react-js/b5-01/static/css/main.855c4370.chunk.css.map",
+    "static/js/2.f737d484.chunk.js.LICENSE.txt": "/d9-blog/react-js/b5-01/static/js/2.f737d484.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.53e2f044.js",
+    "static/css/2.61b4cb56.chunk.css",
+    "static/js/2.f737d484.chunk.js",
+    "static/css/main.855c4370.chunk.css",
+    "static/js/main.ff33a203.chunk.js"
+  ]
+}
